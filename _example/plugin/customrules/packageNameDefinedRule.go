@@ -1,4 +1,4 @@
-package rules
+package customrules
 
 import (
 	"github.com/yoheimuta/go-protoparser/v4/parser"
@@ -52,5 +52,6 @@ func (v *packageNameDefinedVisitor) VisitPackage(p *parser.Package) bool {
 }
 
 func isPackageDefined(packageName string) bool {
+	print(packageName)
 	return len(packageName) > 0
 }
